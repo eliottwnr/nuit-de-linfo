@@ -1,3 +1,5 @@
+import { points } from "../../global.js";
+
 let foodImg = new Image();
 let backgroundImg = new Image();
 let snakeHeadImg = new Image();
@@ -76,6 +78,7 @@ function update() {
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
     if (snakeX == foodX && snakeY == foodY) {
+        points.pointsSnake += 50; // augmente les points
         snakeBody.push([foodX, foodY]);
         placeFood();
     }
