@@ -1,0 +1,44 @@
+body {
+    background-color: #363536;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.pixelify-sans-<uniquifier> {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding-bottom: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  padding: 8px 12px;
+  font-size: 2rem;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+h1 {
+    color : white;
+    text-align: center;
+}
+
+section p {
+    color : white;
+    font-size: 1rem;
+    
+}
