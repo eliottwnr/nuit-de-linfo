@@ -23,13 +23,12 @@ html {
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0px;
 }
 
 nav {
   background-color: #333;
-  padding: 10px;
-  margin-bottom: 20px;
+  width: 100%;
 }
 nav a {
   color: white;
