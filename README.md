@@ -2,4 +2,4 @@
 
 ## To-Do list
 
-- [ ] mettre des trucs à faire ici (ou faire un slack)
+- [x] mettre des trucs à faire ici (ou faire un slack)
