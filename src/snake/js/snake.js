@@ -3,6 +3,9 @@ let snakeColor = "white";
 let foodColor = "yellow";
 let backgroundColor = "green";
 
+const img = new Image();
+img.src = "../images/food.svg" // remplacer ce fichier par la bonne image
+
 let blockSize = 40;
 let total_row = 10; //total row number
 let total_col = 10; //total column number
@@ -46,8 +49,9 @@ function update() {
     context.fillRect(0, 0, board.width, board.height);
 
     // Set food color and position
-    context.fillStyle = foodColor;
-    context.fillRect(foodX, foodY, blockSize, blockSize);
+//    context.fillStyle = foodColor;
+//    context.fillRect(foodX, foodY, blockSize, blockSize);
+    context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
