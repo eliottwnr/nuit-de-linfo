@@ -1,10 +1,35 @@
-// colors
-let snakeColor = "white";
-let foodColor = "yellow";
-let backgroundColor = "green";
+let foodImg = new Image();
+let backgroundImg = new Image();
+let snakeHeadImg = new Image();
+let snakeImg = new Image();
 
-const img = new Image();
-img.src = "../images/food.svg" // remplacer ce fichier par la bonne image
+let imagesLoaded = 0;
+const totalImages = 4;
+
+function checkAllLoaded() {
+    imagesLoaded++;
+    if (imagesLoaded === totalImages) {
+        console.log("All images loaded!");
+        setInterval(update, 1000 / 5);
+    }
+}
+
+// Assign sources
+backgroundImg.src = "images/grass.png";
+backgroundImg.onload = checkAllLoaded;
+backgroundImg.onerror = () => console.log("ERROR: background image");
+
+snakeImg.src = "images/snake.png";
+snakeImg.onload = checkAllLoaded;
+snakeImg.onerror = () => console.log("ERROR: snake image");
+
+snakeHeadImg.src = "images/snake.png";
+snakeHeadImg.onload = checkAllLoaded;
+snakeHeadImg.onerror = () => console.log("ERROR: snake image");
+
+foodImg.src = "images/food.png";
+foodImg.onload = checkAllLoaded;
+foodImg.onerror = () => console.log("ERROR: food image");
 
 let blockSize = 40;
 let total_row = 10; //total row number
@@ -35,8 +60,6 @@ window.onload = function () {
 
     placeFood();
     document.addEventListener("keyup", changeDirection);  //for movements
-    // Set snake speed
-    setInterval(update, 1000 / 5);
 }
 
 function update() {
@@ -45,8 +68,7 @@ function update() {
     }
 
     // Background of a Game
-    context.fillStyle = backgroundColor;
-    context.fillRect(0, 0, board.width, board.height);
+    context.drawImage(backgroundImg, 0, 0, board.width, board.height);
 
     // Set food color and position
 //    context.fillStyle = foodColor;
@@ -67,12 +89,11 @@ function update() {
         snakeBody[0] = [snakeX, snakeY];
     }
 
-    context.fillStyle = snakeColor;
     snakeX += speedX * blockSize; //updating Snake position in X coordinate.
     snakeY += speedY * blockSize;  //updating Snake position in Y coordinate.
-    context.fillRect(snakeX, snakeY, blockSize, blockSize);
+    context.drawImage(snakeHeadImg, snakeX, snakeY, blockSize, blockSize);
     for (let i = 0; i < snakeBody.length; i++) {
-        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
+        context.drawImage(snakeImg, snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
     }
 
     if (snakeX < 0 
