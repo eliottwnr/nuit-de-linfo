@@ -1,7 +1,9 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 body {
-  background-color: #36465f;
+  background-color: #233c62;
+  margin: 0; /* Reset margin */
+  padding: 16px; /* Add padding for spacing */
 }
 
 table {
