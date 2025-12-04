@@ -1,0 +1,21 @@
+body {
+    background-color: #363536;
+    height: 1000px;
+}
+
+#x {
+    border: 3px solid gray;
+    background-color: white;
+    height: 400px;
+    position: relative;
+}
+
+#x .icon {
+    position: absolute;
+    z-index: 2;
+}
+
+img{
+    height : 40px;
+    width: auto;
+}
