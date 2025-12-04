@@ -32,9 +32,7 @@ let LazerGame = function(){
         r = [x,y];
         return r;
     };
-    let goodShot = function(){
-        score += 100;
-    }
+
     let createImage = function(){
         let node = icon_template.cloneNode(true);
         let xy = randomCoord();
@@ -43,11 +41,36 @@ let LazerGame = function(){
         node.style.top = xy[1] + 'px';
         node.style.left = xy[0] + 'px';
         node.setAttribute('src', pickRandomImage());
-        node.setAttribute('onclick', goodShot());
+        //node.setAttribute('class', "cible");
         canvas.appendChild(node);
+
     };
     for (let i=0; i<total_number_of_images;i++){
         createImage();
     };
 
 };
+//Shit went WRONG doesn't work for some reason, need a break
+//let goodShot = function(){
+//    score += 100;
+//    console.log("OpenSource");
+//};
+//let badShot = function(){
+//    score -= 50;
+//    console.log("GAFAM");
+//};
+//var checkShot = function(cible){
+//    let source = cible.src;
+//    if (source.includes("Facebook") || source.includes("Microsoft") || source.includes("Instagram") || source.includes("Amazon"))
+//    {
+//        badShot();
+//    }
+//    else
+//    {
+//        goodShot();
+//    }
+//}
+//
+//var cible = document.getElementsByTagName("img");
+//cible.addEventListener('click', checkShot(cible));
+
