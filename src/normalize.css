@@ -43,7 +43,7 @@ nav a:hover {
 }
    
 
-/* From Uiverse.io by jeremyssocial */ 
+
 @keyframes blinkCursor {
   50% {
     border-right-color: transparent;
@@ -67,12 +67,16 @@ nav a:hover {
 
 .terminal-loader {
   border: 0.1em solid #333;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #1a1a1a;
   color: #0f0;
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
   padding: 1.5em 1em;
-  width: 12em;
+  width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: relative;
