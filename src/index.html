@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuit de l'Info</title>
-    <link rel="stylesheet" href="src/normalize.css">
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
@@ -16,9 +16,10 @@
     <div class="topbar">
 
 	<a href="index.html" target="_blank" class="homelink">Accueil</a>
-        <a href="src/chatbot/chatbot.html">Chatbot</a>
-        <a href="src/LazerGame/laser.html">GAFAM Hunt</a>
-        <a href="src/puzzle/info/info.html">Drag & Drop</a>
+        <a href="snake/snake.html">Snake</a>
+        <a href="chatbot/chatbot.html">Chatbot</a>
+        <a href="LazerGame/laser.html">GAFAM Hunt</a>
+        <a href="puzzle/info/info.html">Drag & Drop</a>
 	</div>
 
     <h1>Bienvenue à la Nuit de l'Info</h1>    
@@ -31,21 +32,25 @@
   </thead>
   <tbody>
     <tr>
+      <td>Puzzle Composants</td>
+      <td id="ptsPuzzle">0</td>
+    </tr>
+    <tr>
       <td>GAFAM Hunt</td>
       <td id="ptsGAFAM">0</td>
     </tr>
     <tr>
-      <td><a href="src/snake/snake.html">Snake (Le trouverez-vous ?)</a></td>
+      <td>Snake (Le trouverez-vous ?)</td>
       <td id="ptsSnake">0</td>
     </tr>
     <tr>
       <td>Total</td>
-      <td id="ptsTotal">0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
 
     <p>Contenu principal ici</p>
-    <script src="src/global.js"></script>
+    <script src="global.js"></script>
 </body>
 </html>
