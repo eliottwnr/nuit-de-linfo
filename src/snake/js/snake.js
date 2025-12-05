@@ -6,6 +6,8 @@ let snakeImg = new Image();
 let imagesLoaded = 0;
 const totalImages = 4;
 
+pts.puzzle = 0;
+
 function checkAllLoaded() {
     imagesLoaded++;
     if (imagesLoaded === totalImages) {
