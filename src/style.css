@@ -20,6 +20,7 @@ nav {
     flex-direction: row;
     justify-content: space-around;
 }
+
 nav a {
   color: white;
   text-decoration: none;
@@ -52,7 +53,22 @@ section p {
     display: flex;
 }
 
-.topbar_links {
+div a {
+    font-size: 30px;
+    color: purple;
+    margin: 5px;
+    text-decoration: none;
+}
+
+div a:hover {
+    color: violet;
+}
+
+div a:active {
+    color: yellow;
+}
+
+.homelink {
     margin-right: auto;
 }
 
