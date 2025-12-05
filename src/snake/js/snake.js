@@ -1,5 +1,3 @@
-import { points } from "../../global.js";
-
 let foodImg = new Image();
 let backgroundImg = new Image();
 let snakeHeadImg = new Image();
@@ -78,7 +76,7 @@ function update() {
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
     if (snakeX == foodX && snakeY == foodY) {
-        points.pointsSnake += 50; // augmente les points
+        pts.snake += 50; // augmente les points
         snakeBody.push([foodX, foodY]);
         placeFood();
     }
@@ -106,7 +104,7 @@ function update() {
         
         // Out of bound condition
         gameOver = true;
-        alert("Game Over");
+        alert("Game Over, score : " + pts.snake);
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
@@ -114,7 +112,7 @@ function update() {
             
             // Snake eats own body
             gameOver = true;
-            alert("Game Over");
+            alert("Game Over, score : " + pts.snake);
         }
     }
 }
