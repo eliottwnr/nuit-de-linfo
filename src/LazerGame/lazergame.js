@@ -16,12 +16,12 @@ let LazerGame = function(){
     
 
     let descriptions = {
-    "Facebook": "Le célèbre réseau social bleu.",
-    "Microsoft": "L'une des plus grandes entreprises informatiques.",
-    "Instagram": "Application populaire de partage de photos.",
-    "Amazon": "Le géant mondial du e-commerce.",
-    "Tchap": "Messagerie sécurisée de l'État français.",
-    "Primtux": "Distribution Linux éducative destinée aux écoles."
+    "Facebook": "Super pour discuter, mais clairement, il ne faut pas espérer garder tes données privées !",
+    "Microsoft": "L'une des plus grandes entreprises informatiques. Egalement connue pour récolter tes données. Ils participent également à l'obsolescence des ordinateurs !",
+    "Instagram": "Application populaire de partage de photos. Faisant partie du groupe de Facebook.",
+    "Amazon": "Le géant mondial du e-commerce, ils participent à l'obsolescence du matériel. Alors qu'on pourrait réparer et garder notre matériel bien plus longtemps !",
+    "Tchap": "La messagerie sécurisée utilisé par les ministères et les cabinets !",
+    "Primtux": "Distribution Linux éducative destinée aux écoles. Idéale pour faire fonctionner des vieux ordinateurs et leur donner une seconde vie !"
 };
 let alreadyShown = {
     "Facebook": false,
