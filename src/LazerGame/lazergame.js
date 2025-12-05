@@ -162,6 +162,6 @@ function showPopup(text, x, y) {
             window.location.href = "../index.html";
         });
     }
-sessionStorage.setItem('Gaf', score);
+sessionStorage.setItem('gaf', score);
 }, 1000);
 };
