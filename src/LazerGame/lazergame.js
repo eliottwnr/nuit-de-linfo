@@ -159,7 +159,7 @@ function showPopup(text, x, y) {
         `;
 
         document.querySelector("#menuBtn").addEventListener("click", function(){
-            window.location.href = "../index.html";
+            window.location.href = "../../index.html";
         });
     }
 sessionStorage.setItem('gaf', score);

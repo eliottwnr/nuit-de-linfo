@@ -78,7 +78,7 @@ zones.forEach(zone => {
       comp.dataset.placed = 'true';
       placedCount += 1;
       updateStatus();
-        showToast(`Composant ${draggedId} placé ✅ (${pts.puzzle} points récupérés)`, 'ok', 1200);
+        showToast(`Composant ${draggedId} placé ✅`, 'ok', 1200);
 
       if (placedCount === 6) showToast('Bravo ! Tous les composants sont placés 🎉', 'ok', 1800);
     } else {
