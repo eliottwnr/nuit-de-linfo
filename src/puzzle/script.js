@@ -1,5 +1,3 @@
-// DnD + toasts (inchangé sauf messages erreur)
-
 const statusText = document.getElementById('status-text');
 const resetBtn = document.getElementById('reset-btn');
 const components = Array.from(document.querySelectorAll('.component'));

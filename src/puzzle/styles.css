@@ -27,7 +27,7 @@ header {
 header h1 { margin: 0 0 6px; font-size: 20px; }
 header p { margin: 0; color: var(--muted); }
 
-/* Deux colonnes: board à gauche, tray à droite */
+
 main.layout {
   display: grid;
   grid-template-columns: 1fr minmax(280px, 360px);
@@ -48,7 +48,6 @@ main.layout {
   overflow: hidden;
 }
 
-/* Image pixel art agrandie et nette */
 #motherboard {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
@@ -57,7 +56,7 @@ main.layout {
   image-rendering: crisp-edges;
 }
 
-/* Zones de drop */
+
 .drop-zone {
   position: absolute;
   border: 2px dashed rgba(63,167,255,0.35);
@@ -68,18 +67,18 @@ main.layout {
 .drop-zone.highlight { border-color: var(--accent-2); background: rgba(63,167,255,0.18); }
 .drop-zone.filled { border-color: var(--accent); background: rgba(53,179,106,0.22); }
 
-/* Plateau des composants à droite */
+
 .tray {
   display: grid;
-  grid-template-columns: 1fr;            /* une colonne verticale */
+  grid-template-columns: 1fr;          
   align-content: start;
   gap: 12px;
   padding: 16px;
   background: var(--panel);
   border: 1px solid #262a33;
   border-radius: 12px;
-  max-height: calc(80vmin + 32px);       /* aligner visuellement avec la board */
-  overflow: auto;                        /* scroll si nécessaire */
+  max-height: calc(80vmin + 32px);       
+  overflow: auto;                        
 }
 
 .component {
@@ -106,7 +105,7 @@ main.layout {
 }
 .component span { color: var(--muted); font-size: 14px; }
 
-/* Statut */
+
 .status {
   display: flex;
   align-items: center;
@@ -128,7 +127,7 @@ main.layout {
 }
 #reset-btn:hover { background: #1d2a35; }
 
-/* Toasts */
+
 .toast {
   position: fixed;
   left: 50%;
@@ -149,7 +148,7 @@ main.layout {
 .toast.ok { border-color: #2c7a4b; color: var(--ok); }
 .toast.err { border-color: #7a2c2c; color: var(--danger); }
 
-/* Responsive: empiler sur petits écrans */
+
 @media (max-width: 900px) {
   main.layout {
     grid-template-columns: 1fr;

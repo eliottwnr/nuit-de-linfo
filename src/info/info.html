@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carte mère — Découverte des composants</title>
+  <link rel="stylesheet" href="info.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Carte mère — Découverte des composants</h1>
+  </header>
+
+  <main class="layout">
+    <section class="board-wrapper" aria-label="Carte mère">
+      <div class="board" id="board">
+        <!-- IMPORTANT: mets le src de ton PNG 128x128 -->
+        <img id="motherboard" src="../img/carte_mere.png" alt="Carte mère pixel art"/>
+
+        <!-- Hotspots (coordonnées calibrées) -->
+        <button class="hotspot" data-key="cpu" aria-label="CPU"
+          style="left: 16.178%; top: 16.6557%; width: 14.7115%; height: 15.0781%;"></button>
+
+        <button class="hotspot" data-key="ram" aria-label="RAM"
+          style="left: 35.7021%; top: 14.0558%; width: 19.5%; height: 18.5%;"></button>
+
+        <button class="hotspot" data-key="nvme" aria-label="NVMe"
+          style="left: 31.8002%; top: 35.8995%; width: 19.4453%; height: 9.62392%;"></button>
+
+        <button class="hotspot" data-key="bay" aria-label="Baie de disque dur"
+          style="left: 69.055%; top: 25.1795%; width: 15.6002%; height: 19.8329%;"></button>
+
+        <button class="hotspot" data-key="gpu" aria-label="GPU"
+          style="left: 6.64118%; top: 58.3312%; width: 36.164%; height: 13.2999%;"></button>
+
+        <button class="hotspot" data-key="psu" aria-label="Alimentation"
+          style="left: 0%; top: 83.699%; width: 34.3339%; height: 16.301%;"></button>
+
+        <div id="tooltip" role="tooltip" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <aside class="legend" aria-label="Informations et légende">
+      <section class="about-board">
+        <h2>La carte mère, c’est quoi ?</h2>
+        <p>
+          Imagine la carte mère comme une grande “plaque de connexion” où tout se branche:
+          le cerveau (CPU), la mémoire (RAM), le stockage (NVMe ou disque dur), la carte graphique (GPU),
+          et l’alimentation (PSU). Elle fait parler tout le monde ensemble pour que l’ordinateur fonctionne.
+        </p>
+      </section>
+
+      <section>
+        <h3>Survole les zones pour découvrir</h3>
+        <ol>
+          <li>CPU — le cerveau qui réfléchit.</li>
+          <li>RAM — la mémoire de travail, très rapide.</li>
+          <li>NVMe — le “disque” ultra rapide (SSD).</li>
+          <li>Baie de disque dur — l’endroit pour mettre un gros disque.</li>
+          <li>GPU — la carte qui affiche les images et les jeux.</li>
+          <li>Alimentation — la “prise d’énergie” de l’ordinateur.</li>
+        </ol>
+        <p class="hint">Passe ta souris sur les zones en pointillés pour lire une explication simple.</p>
+
+        <div class="cta">
+          <a class="btn-giant" href="../puzzle/index.html" aria-label="Aller au jeu de drag & drop">
+            🎯 Lancer le jeu de drag & drop
+          </a>
+          <small class="cta-hint">Place chaque composant au bon endroit sur la carte.</small>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <script src="info.js"></script>
+</body>
+</html>
