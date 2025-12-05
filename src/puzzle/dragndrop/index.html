@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeu Drag & Drop Carte Mère</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Assembler les composants sur la carte mère</h1>
+    <p>Glisse chaque composant sur l’emplacement correspondant.</p>
+  </header>
+
+  <main class="layout">
+    <section class="board-wrapper">
+      <div class="board">
+        <img id="motherboard" src="../img/carte_mere_empty.png" alt="Carte mère pixel art"/>
+
+        <div class="drop-zone" data-slot="1" style="left: 16.178%; top: 16.6557%; width: 14.7115%; height: 15.0781%;"></div>
+        <div class="drop-zone" data-slot="2" style="left: 35.7021%; top: 14.0558%; width: 19.5%; height: 18.5%;"></div>
+        <div class="drop-zone" data-slot="3" style="left: 31.8002%; top: 35.8995%; width: 19.4453%; height: 9.62392%;"></div>
+        <div class="drop-zone" data-slot="4" style="left: 69.055%; top: 25.1795%; width: 15.6002%; height: 19.8329%;"></div>
+        <div class="drop-zone" data-slot="5" style="left: 6.64118%; top: 58.3312%; width: 36.164%; height: 13.2999%;"></div>
+        <div class="drop-zone" data-slot="6" style="left: 0%; top: 83.699%; width: 34.3339%; height: 16.301%;"></div>
+      </div>
+      <p class="copyright">© Pixel Art par Louis Casella — tous droits réservés à cup(sugar,milk,coffee).</p>
+    </section>
+
+    <aside class="tray" aria-label="Composants disponibles">
+      <div class="component" draggable="true" data-id="1">
+        <img src="../img/cpu.png" alt="Composant 1"/><span>Processeur</span>
+      </div>
+      <div class="component" draggable="true" data-id="2">
+        <img src="../img/ram.png" alt="Composant 2"/><span>RAM (Mémoire vive)</span>
+      </div>
+      <div class="component" draggable="true" data-id="3">
+        <img src="../img/nvme.png" alt="Composant 3"/><span>SSD</span>
+      </div>
+      <div class="component" draggable="true" data-id="4">
+        <img src="../img/slotStorage.png" alt="Composant 4"/><span>Baie de stockage</span>
+      </div>
+      <div class="component" draggable="true" data-id="5">
+        <img src="../img/gpu.png" alt="Composant 5"/><span>Carte graphique</span>
+      </div>
+      <div class="component" draggable="true" data-id="6">
+        <img src="../img/alim.png" alt="Composant 6"/><span>Alimentation</span>
+      </div>
+    </aside>
+  </main>
+
+  <section class="status">
+    <p id="status-text">0 / 6 placés</p>
+    <button id="reset-btn" type="button">Recommencer</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
