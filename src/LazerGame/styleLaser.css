@@ -59,7 +59,7 @@ body {
     font-size: 14px;
     font-family: Arial, sans-serif;
     pointer-events: none;
-    animation: fade 30s forwards;
+    animation: fade 15s forwards;
     z-index: 9999;
 }
 
