@@ -125,21 +125,13 @@ const questionsReponses = {
         ],
 
     "merci":
-        ["s<dgfdJKLGFEFKeIOGFDOFHSFgdOFESHF",
-        "difhiugfdsfdsbvdouvsgvousougf",
-        "dihguopvduofaeOUFDGAEZTEIUFKIEZYEIUIGOQERULFHRU",
-        "lghlrhjdsgrhgiohgrgiyeufhguldyefirgrugfehgfsuehgkjfghlghrgoiqfgfqjkgrskgfhshfhereroghrlghqfudghfskfdqsqfgqesrgfqsrlggqrgrfghrqkhfhgfbdqsfughfdkghfbqdsukgbvfulkghsfgfjgfdlgfslqhdsgfghlfkjv",
-        "ldfkvjfhgfdkhjkjghgsfhdfdg_ÇZ'R-'TÈÈ_('(T'_È(T'(ÈAZ_EYRAÈ_''YTRAÈZRY",
+        [
         "Je vous déteste.",
         "Derien..."
         ],
 
     "Merci":
-        ["s<dgfdJKLGFEFKeIOGFDOFHSFgdOFESHF",
-        "difhiugfdsfdsbvdouvsgvousougf",
-        "dihguopvduofaeOUFDGAEZTEIUFKIEZYEIUIGOQERULFHRU",
-        "lghlrhjdsgrhgiohgrgiyeufhguldyefirgrugfehgfsuehgkjfghlghrgoiqfgfqjkgrskgfhshfhereroghrlghqfudghfskfdqsqfgqesrgfqsrlggqrgrfghrqkhfhgfbdqsfughfdkghfbqdsukgbvfulkghsfgfjgfdlgfslqhdsgfghlfkjv",
-        "ldfkvjfhgfdkhjkjghgsfhdfdg_ÇZ'R-'TÈÈ_('(T'_È(T'(ÈAZ_EYRAÈ_''YTRAÈZRY",
+        [
         "Je vous déteste.",
         "Derien..."
         ],
