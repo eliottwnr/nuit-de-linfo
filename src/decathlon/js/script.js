@@ -21,6 +21,11 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
     points.pointsQCM += parseInt(qcm4 || 0) * 10; // frequency: 0→0pts, 1→10pts, 2→20pts, 3→30pts
     points.pointsQCM += parseInt(qcm5 || 0) * 5;  // objective: 1→5pts, 2→10pts, 3→15pts
 
+
+    const result = document.createElement("div");
+    result.innerHTML = `<p>Merci d'avoir répondu, Vous avez obtenu ${points.pointsQCM} points !`;
+    document.getElementsByClassName("resultat")[0].appendChild(result);
+
     if (points.pointsQCM <= 50){
         const exos = document.createElement("div");
         exos.innerHTML = `
