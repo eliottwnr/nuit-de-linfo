@@ -1,4 +1,4 @@
-let score = 0;
+pts.LazerGame = 0;
 let gameDuration = 60; // secondes
 let gameActive = true;
 let gamePaused = false;
@@ -113,8 +113,8 @@ function showPopup(text, x, y) {
     else if (src.includes("Tchap")) key = "Tchap";
     else if (src.includes("Primtux")) key = "Primtux";
 
-    score += pointsTable[key] || 1;
-    document.querySelector("#scoreDisplay").textContent = "Score : " + score;
+    pts.LazerGame += pointsTable[key] || 1;
+    document.querySelector("#scoreDisplay").textContent = "Score : " + pts.LazerGame;
 
     // POP-UP la première fois
     if (!alreadyShown[key]) {
@@ -154,7 +154,7 @@ function showPopup(text, x, y) {
         // Stopper le jeu
         canvas.innerHTML = `
             <h1>FIN DU JEU</h1>
-            <h2>Score : ${score}</h2>
+            <h2>Score : ${pts.LazerGame}</h2>
             <button id="menuBtn">Retour au menu</button>
         `;
 
@@ -164,6 +164,4 @@ function showPopup(text, x, y) {
     }
 
 }, 1000);
-
-pts.lazerGame = score;
 };
