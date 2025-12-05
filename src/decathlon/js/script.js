@@ -43,30 +43,34 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
                     <source  src="media/pompes.webm" type="video/webm"/>
                     </video>
                   </figure>
-
+                  
+                  <h3>15 répétitions !</h3>
                    <h4>Exercice 2 : Les montées de genoux !</h4>
 
                   <figure>
                     <video controls muted>
-                    <source  src="media/pompes.webm" type="video/webm" />
+                    <source  src="media/jumpj.webm" type="video/webm" />
                     </video>
                   </figure>
+                  <h3>15 répétitions !</h3>
 
-                   <h4>Exercice 3 : Les montées de genoux !</h4>
+                   <h4>Exercice 3 : Les squats !</h4>
 
                   <figure>
                     <video controls muted>
-                    <source  src="media/pompes.webm" type="video/webm" />
+                    <source  src="media/squats.webm" type="video/webm" />
                     </video>
                   </figure>
-
-                    <h4>Exercice 4 : Les montées de genoux !</h4>
-
+                    <h3>15 répétitions !</h3>
+                    
+                    <h4>Exercice 4 : Les jumping jacks !</h4>
+ 
                   <figure>
                     <video controls muted>
-                    <source  src="media/pompes.webm" type="video/webm" />
+                    <source  src="jump/pompes.webm" type="video/webm" />
                     </video>
                   </figure>
+                  <h3>15 répétitions !</h3>
             `;
 
         exercicesContainer.appendChild(exos);
@@ -83,11 +87,11 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
                 <figure>
                     <video controls muted>
-                    <source  src=".webm" type="video/webm"/>
+                    <source  src="media/pompes.webm" type="video/webm"/>
                 </video>
             </figure>
                 <aside>
-                    <h3>Time</h3>
+                    <h3>3O répétitions !</h3>
                 </aside>
             <h4>Description</h4>
             <p>fesses allignées avec le reste du corps, les abdos gainés, bras pliés le long du corps, descendre bien bas. si trop difficile, se mettre a genoux</p>
@@ -96,12 +100,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
                 <figure>
                     <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/jumpj.webm" type="video/webm" />
                     </video>
                 </figure>
                 
                 <aside>
-                    <h3>Time</h3>
+                   <h3>3O répétitions !</h3>
                 </aside>
                 <h4>Description</h4>
                 <p>montez vos genoux jusqu'à qu'ils soient pliés en angle droit, de facon rapide et dynamique en alternant les jambes</p>
@@ -110,12 +114,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
             <figure>
                 <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/squats.webm" type="video/webm" />
                 </video>
             </figure>
                     
             <aside>
-                <h3>Time</h3>
+                <h3>3O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>gardez le dos droit lorsque vous descendez, genoux pliés en angle droit, abdos gainés, regardez droit devant vous</p>
@@ -124,12 +128,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
               <figure>
                 <video controls muted>
-                <source  src=".webm" type="video/webm" />
+                <source  src="media/jump.webm" type="video/webm" />
                 </video>
               </figure>
                      
             <aside>
-                <h3>Time</h3>
+               <h3>3O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>synchronisez vos bras et jambes.  les bras s'élèvent et les jambes s'écartent avant de revenir à leur position initiale.</p>
@@ -138,11 +142,11 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
               <figure>
                 <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/rameur.webm" type="video/webm" />
                 </video>
               </figure>
             <aside>
-                <h3>Time</h3>
+               <h3>3O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>en position allongée, abdos gainés et seuls vos fesses touchent le sol, pas les pieds ! Puis ramenez bras et jambes comme si vous rammiez pour de vrai !</p>
@@ -152,12 +156,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
               <figure>
                 <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/montain.webm" type="video/webm" />
                 </video>
               </figure>
             
               <aside>
-                <h3>Time</h3>
+                <h3>3O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>mettez vous en position de pompe haute puis ramener vos genoux en alternant les 2 jambes comme si vous grimpiez.</p>
@@ -178,11 +182,11 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
                 <figure>
                     <video controls muted>
-                    <source  src=".webm" type="video/webm"/>
+                    <source  src="media/pompes.webm" type="video/webm"/>
                 </video>
             </figure>
                 <aside>
-                    <h3>Time</h3>
+                    <h3>5O répétitions !</h3>
                 </aside>
             <h4>Description</h4>
             <p>fesses allignées avec le reste du corps, les abdos gainés, bras pliés le long du corps, descendre bien bas. si trop difficile, se mettre a genoux</p>
@@ -191,12 +195,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
                 <figure>
                     <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/jumpj.webm" type="video/webm" />
                     </video>
                 </figure>
                 
                 <aside>
-                    <h3>Time</h3>
+                    <h3>5O répétitions !</h3>
                 </aside>
                 <h4>Description</h4>
                 <p>montez vos genoux jusqu'à qu'ils soient pliés en angle droit, de facon rapide et dynamique en alternant les jambes</p>
@@ -205,12 +209,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
             <figure>
                 <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/squats.webm" type="video/webm" />
                 </video>
             </figure>
                     
             <aside>
-                <h3>Time</h3>
+                <h3>5O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>gardez le dos droit lorsque vous descendez, genoux pliés en angle droit, abdos gainés, regardez droit devant vous</p>
@@ -219,12 +223,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
               <figure>
                 <video controls muted>
-                <source  src=".webm" type="video/webm" />
+                <source  src="media/jump.webm" type="video/webm" />
                 </video>
               </figure>
                      
             <aside>
-                <h3>Time</h3>
+                <h3>5O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>synchronisez vos bras et jambes.  les bras s'élèvent et les jambes s'écartent avant de revenir à leur position initiale.</p>
@@ -233,11 +237,11 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
               <figure>
                 <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/rameur.webm" type="video/webm" />
                 </video>
               </figure>
             <aside>
-                <h3>Time</h3>
+                <h3>5O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>en position allongée, abdos gainés et seuls vos fesses touchent le sol, pas les pieds ! Puis ramenez bras et jambes comme si vous rammiez pour de vrai !</p>
@@ -247,12 +251,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
               <figure>
                 <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/montain.webm" type="video/webm" />
                 </video>
               </figure>
             
               <aside>
-                <h3>Time</h3>
+                <h3>5O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>mettez vous en position de pompe haute puis ramener vos genoux en alternant les 2 jambes comme si vous grimpiez.</p>
@@ -262,12 +266,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
               <figure>
                 <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/abdos.webm" type="video/webm" />
                 </video>
               </figure>
             
               <aside>
-                <h3>Time</h3>
+                <h3>5O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>en position allongée, genoux pliés, sans bouger le reste du corps, relevez votre bustre en gainant jusqu'à vos genoux</p>
@@ -277,12 +281,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 
               <figure>
                 <video controls muted>
-                    <source  src=".webm" type="video/webm" />
+                    <source  src="media/burp.webm" type="video/webm" />
                 </video>
               </figure>
             
               <aside>
-                <h3>Time</h3>
+                <h3>5O répétitions !</h3>
             </aside>
             <h4>Description</h4>
             <p>exécutez une pompe rapidement mais bien faite, puis en se relever en rammenant ses genoux et pieds, puis faire une extension vers le haut
