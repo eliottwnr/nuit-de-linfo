@@ -52,14 +52,8 @@ section p {
     display: flex;
 }
 
-button {
-    color: white;
-    background-color: black;
-    border: none;
-}
-
 .topbar_links {
-    : flex-end;
+    margin-right: auto;
 }
 
 table {
