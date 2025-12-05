@@ -1,5 +1,5 @@
 score = 0;
-let gameDuration = 5; // secondes
+let gameDuration = 50; // secondes
 let gameActive = true;
 let gamePaused = false;
 
