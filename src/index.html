@@ -1,139 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nuit de l'Info — Mini-jeu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuit de l'Info</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
-  <!-- normalize facultatif : si tu n'as pas le fichier, supprime cette ligne -->
-  <link rel="stylesheet" href="normalize.css">
-
-  <!-- ton fichier CSS (doit exister dans le même dossier) -->
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- police (optionnelle) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="topbar">
+	<button>Accueil</button>
+	<button>Composants d'un pc</button>
+	<button>GAFAM Hunt</button>
+    </div>
 
-  <!-- Barre d'icônes (simplifiée pour éviter erreurs SVG) -->
-  <div class="input" aria-hidden="false" style="display:flex;gap:8px;padding:12px;">
-    <button class="value">Account</button>
-    <button class="value">Appearance</button>
-    <button class="value">Accessibility</button>
-    <button class="value">Notifications</button>
-  </div>
-
-  <main class="container" style="padding:16px;">
-    <header>
-      <h1>Bienvenue à la Nuit de l'Info</h1>
-    </header>
-
-    <section class="scores" style="margin:12px 0;">
-      <table border="1" aria-label="Scores des jeux">
-        <thead>
-          <tr>
-            <th>Jeu</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Fortnite</td><td>2500</td></tr>
-          <tr><td>Minecraft</td><td>1800</td></tr>
-          <tr><td>League of Legends</td><td>3200</td></tr>
-          <tr><td>Call of Duty</td><td>2900</td></tr>
-          <tr><td>Apex Legends</td><td>2700</td></tr>
-        </tbody>
-      </table>
-    </section>
+    <h1>Bienvenue à la Nuit de l'Info</h1>    
+<table border="1">
+  <thead>
+    <tr>
+      <th>Jeu</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fortnite</td>
+      <td>2500</td>
+    </tr>
+    <tr>
+      <td>Minecraft</td>
+      <td>1800</td>
+    </tr>
+    <tr>
+      <td>League of Legends</td>
+      <td>3200</td>
+    </tr>
+    <tr>
+      <td>Call of Duty</td>
+      <td>2900</td>
+    </tr>
+    <tr>
+      <td>Apex Legends</td>
+      <td>2700</td>
+    </tr>
+  </tbody>
+</table>
 
     <p>Contenu principal ici</p>
-
-    <!-- ********** MINI-JEU : monter une carte mère ********** -->
-    <section class="game" style="margin-top:24px;">
-      <div class="wrap">
-        <div class="topbar">
-          <h2>Mini-jeu : monter une carte mère — glisse les composants au bon endroit</h2>
-          <div class="controls">
-            <div class="scoreboard"><div class="score">Score : <span id="score">0</span></div></div>
-            <button id="reset" class="secondary">Réinitialiser</button>
-          </div>
-        </div>
-
-        <div class="layout">
-          <aside class="palette">
-            <h3>Composants disponibles</h3>
-            <div class="items" id="items">
-              <!-- CPU -->
-              <div class="item" draggable="true" data-type="cpu" id="comp-cpu">
-                <div class="icon">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Intel_i7_CPU.jpg" alt="CPU" width="56" height="40">
-                </div>
-                <div class="label">Processeur (CPU)</div>
-              </div>
-
-              <!-- RAM -->
-              <div class="item" draggable="true" data-type="ram" id="comp-ram">
-                <div class="icon">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/DDR4_RAM.jpg" alt="RAM" width="56" height="40">
-                </div>
-                <div class="label">Barrette RAM</div>
-              </div>
-
-              <!-- GPU -->
-              <div class="item" draggable="true" data-type="gpu" id="comp-gpu">
-                <div class="icon">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/GPU-Nvidia-RTX2080.jpg" alt="GPU" width="56" height="40">
-                </div>
-                <div class="label">Carte graphique (GPU)</div>
-              </div>
-
-              <!-- SSD -->
-              <div class="item" draggable="true" data-type="ssd" id="comp-ssd">
-                <div class="icon">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Samsung_860_Evo_SSD.jpg" alt="SSD" width="56" height="40">
-                </div>
-                <div class="label">SSD / Stockage</div>
-              </div>
-
-              <!-- PSU -->
-              <div class="item" draggable="true" data-type="psu" id="comp-psu">
-                <div class="icon">
-                  <!-- image PSU publique, si lien externe indisponible, remplace par local images/psu.jpg -->
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/ATX_power_supply.jpg" alt="Alimentation (PSU)" width="56" height="40">
-                </div>
-                <div class="label">Alimentation (PSU)</div>
-              </div>
-            </div>
-          </aside>
-
-          <div class="board-wrap">
-            <div class="board">
-              <div class="mobo" id="mobo">
-                <img src="/img/carte_mere.png" class="pixel-art" alt="Carte mère vide" width="600" height="600">
-                <!-- Drop zones positionnées en CSS -->
-                <div class="dropzone cpu" data-accept="cpu" data-slot="cpu">Socket CPU</div>
-                <div class="dropzone ram1" data-accept="ram" data-slot="ram1">Slot RAM 1</div>
-                <div class="dropzone ram2" data-accept="ram" data-slot="ram2">Slot RAM 2</div>
-                <div class="dropzone gpu" data-accept="gpu" data-slot="gpu">Emplacement PCIe (GPU)</div>
-                <div class="dropzone ssd" data-accept="ssd" data-slot="ssd">Emplacement SSD</div>
-                <div class="dropzone psu" data-accept="psu" data-slot="psu">Alim (PSU)</div>
-              </div>
-            </div>
-
-            <p class="hint">Glisse un composant depuis la colonne de gauche, et lâche-le sur l'emplacement approprié. Le score augmente si c'est placé sur la bonne zone.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ********** FIN MINI-JEU ********** -->
-
-  </main>
-
-  <!-- Script du jeu (déféré) -->
-  <script src="global.js" defer></script>
 </body>
 </html>

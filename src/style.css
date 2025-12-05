@@ -1,9 +1,3 @@
-.pixel-art {
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-}
-
-
 body {
     background-color: #363536;
     font-family: "Pixelify Sans", sans-serif;
@@ -49,59 +43,16 @@ section p {
     
 }
 
-
-/* dropzone carré */
-.dropzone {
-  width: 140px;
-  height: 140px;
-  min-width: 140px;
-  min-height: 140px;
-  position: absolute;
-  border-radius: 8px;
-  border: 2px dashed rgba(255,255,255,0.06);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:6px;
-  font-size:13px;
-  color:rgba(255,255,255,0.8);
-  background: rgba(0,0,0,0.02);
+.topbar {
+    width: 100%;
+    height: 5%;
+    background-color: black;
+    padding: 20px;
+    font-size: 25px;
 }
 
-/* feedback */
-.dropzone.ok { border-color: rgba(34,197,94,0.8); background: rgba(34,197,94,0.06);}
-.dropzone.bad { border-color: rgba(239,68,68,0.85); background: rgba(239,68,68,0.04);}
-
-/* icônes images : s'adapter à la case */
-.item .icon img {
-  display:block;
-  max-width:56px;
-  max-height:40px;
-  width:auto;
-  height:auto;
+button {
+    color: white;
+    background-color: black;
+    border: none;
 }
-
-/* composant placé */
-.item.placed {
-  pointer-events:none;
-  opacity:0.95;
-}
-
-/* bouton retirer */
-.remove-btn {
-  margin-left:8px;
-  font-size:11px;
-  padding:6px;
-  border-radius:6px;
-  border:none;
-  cursor:pointer;
-}
-
-/* exemple positions (tu peux adapter) */
-.cpu{ top:24px; left:46%; transform:translateX(-50%); }
-.ram1{ top:24px; right:18px; }
-.ram2{ top:160px; right:18px; }
-.gpu{ bottom:62px; left:40px; width:340px; height:140px; } /* GPU large slot */
-.ssd{ bottom:20px; right:24px; }
-.dropzone.psu{ right:6px; top:50%; transform:translateY(-50%); }
