@@ -5,7 +5,6 @@ const zones = Array.from(document.querySelectorAll('.drop-zone'));
 
 let placedCount = 0;
 
-pts.puzzle = 0;
 
 let toastTimer = null;
 const toast = document.createElement('div');
@@ -26,7 +25,6 @@ function showToast(msg, type = 'ok', duration = 1600) {
 
 function updateStatus() {
   statusText.textContent = `${placedCount} / 6 placés`;
-  pts.puzzle += 50;
 }
 
 function resetGame() {
@@ -91,5 +89,5 @@ zones.forEach(zone => {
     }
   });
 });
-sessionStorage.setItem('puzzle', pts.puzzle);
+
 updateStatus();
