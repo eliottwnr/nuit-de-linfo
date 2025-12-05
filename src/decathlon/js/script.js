@@ -7,7 +7,7 @@ function getSelectedValue(name) {
 }
 
 document.querySelector('input[type="button"]').addEventListener("click", () => {
-    pts.pointsQCM = 0;
+    let pts = 0;
 
     const qcm1 = getSelectedValue("qcm1"); // Oui / Non
     const qcm2 = document.getElementById("qcm2").value; // Text input
@@ -16,21 +16,21 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
     const qcm5 = getSelectedValue("qcm5"); // 1 / 2 / 3
 
     // Points calculation
-    pts.pointsQCM += (qcm1 === "Oui") ? 30 : 10;
-    pts.pointsQCM += (qcm3 === "Oui") ? 20 : 5;
-    pts.pointsQCM += parseInt(qcm4 || 0) * 10; // frequency: 0→0pts, 1→10pts, 2→20pts, 3→30pts
-    pts.pointsQCM += parseInt(qcm5 || 0) * 5;  // objective: 1→5pts, 2→10pts, 3→15pts
+    pts += (qcm1 === "Oui") ? 30 : 10;
+    pts += (qcm3 === "Oui") ? 20 : 5;
+    pts += parseInt(qcm4 || 0) * 10; // frequency: 0→0pts, 1→10pts, 2→20pts, 3→30pts
+    pts += parseInt(qcm5 || 0) * 5;  // objective: 1→5pts, 2→10pts, 3→15pts
 
     const resultContainer = document.getElementsByClassName("resultat")[0];
     const result = document.createElement("div");
     resultContainer.innerHTML = '';
-    result.innerHTML = `<p>Merci d'avoir répondu, Vous avez obtenu ${pts.pointsQCM} points !`;
+    result.innerHTML = `<p>Merci d'avoir répondu, Vous avez obtenu ${pts} points !`;
     resultContainer.appendChild(result);
 
 
     const exercicesContainer = document.getElementsByClassName("exercices")[0];
 
-    if (pts.pointsQCM <= 50){
+    if (pts <= 50){
         exercicesContainer.innerHTML = '';
         const exos = document.createElement("div");
         exos.innerHTML = `
@@ -76,7 +76,7 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
         exercicesContainer.appendChild(exos);
     }
 
-    else if (pts.pointsQCM > 50 && pts.pointsQCM <= 80){
+    else if (pts > 50 && pts <= 80){
         exercicesContainer.innerHTML = '';
 
         const exos = document.createElement("div");
@@ -171,7 +171,7 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
         exercicesContainer.appendChild(exos);
     }
 
-    else if (pts.pointsQCM > 80){
+    else if (pts > 80){
         exercicesContainer.innerHTML = '';
 
         const exos = document.createElement("div");
