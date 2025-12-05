@@ -49,7 +49,7 @@ function showPopup(text, x, y) {
     setTimeout(() => {
         popup.remove();
         gamePaused = false;
-    }, 30000);
+    }, 5000);
 }
 
 
@@ -165,4 +165,5 @@ function showPopup(text, x, y) {
 
 }, 1000);
 
+pts.lazerGame = score;
 };
