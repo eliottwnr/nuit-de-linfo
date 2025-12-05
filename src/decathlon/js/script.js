@@ -9,6 +9,8 @@ function getSelectedValue(name) {
 }
 
 document.querySelector('input[type="button"]').addEventListener("click", () => {
+    points.pointsQCM = 0;
+
     const qcm1 = getSelectedValue("qcm1"); // Oui / Non
     const qcm2 = document.getElementById("qcm2").value; // Text input
     const qcm3 = getSelectedValue("qcm3"); // Oui / Non
@@ -22,11 +24,17 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
     points.pointsQCM += parseInt(qcm5 || 0) * 5;  // objective: 1→5pts, 2→10pts, 3→15pts
 
 
+    const resultContainer = document.getElementsByClassName("resultat")[0];
     const result = document.createElement("div");
+    resultContainer.innerHTML = '';
     result.innerHTML = `<p>Merci d'avoir répondu, Vous avez obtenu ${points.pointsQCM} points !`;
-    document.getElementsByClassName("resultat")[0].appendChild(result);
+    resultContainer.appendChild(result);
+
+
+    const exercicesContainer = document.getElementsByClassName("exercices")[0];
 
     if (points.pointsQCM <= 50){
+        exercicesContainer.innerHTML = '';
         const exos = document.createElement("div");
         exos.innerHTML = `
                     <h3>Circuit pour les amateurs ou les futurs machines</h3>
@@ -64,10 +72,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
                   </figure>
             `;
 
-        document.getElementsByClassName("exercices")[0].appendChild(exos);
+        exercicesContainer.appendChild(exos);
     }
 
     else if (points.pointsQCM > 50 && points.pointsQCM <= 80){
+        exercicesContainer.innerHTML = '';
+
         const exos = document.createElement("div");
         exos.innerHTML = `
                 <h3>Circuit pour les intermédiaires, courage bienôt les sommets</h3>
@@ -157,10 +167,12 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
             </section>
             `;
 
-        document.getElementsByClassName("exercices")[0].appendChild(exos);
+        exercicesContainer.appendChild(exos);
     }
 
     else if (points.pointsQCM > 80){
+        exercicesContainer.innerHTML = '';
+
         const exos = document.createElement("div");
         exos.innerHTML = `
              <h3>Circuit pour les experts, les cyborg</h3>
@@ -280,6 +292,6 @@ document.querySelector('input[type="button"]').addEventListener("click", () => {
 </p>
             `;
 
-        document.getElementsByClassName("exercices")[0].appendChild(exos);
+        exercicesContainer.appendChild(exos);
     }
 });
