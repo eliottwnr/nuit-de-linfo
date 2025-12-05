@@ -3,19 +3,72 @@ body {
     height: 1000px;
 }
 
+/* Conteneur principal où apparaissent les cibles */
 #x {
-    border: 3px solid gray;
-    background-color: white;
-    height: 400px;
     position: relative;
+    width: 100%;
+    height: 600px; /* adapte au besoin */
+    background: #363636;
+    border: 3px solid #FFEB2B;
+    overflow: hidden;
 }
 
-#x .icon {
+/* Modèle d’image */
+#template,
+#x img {
     position: absolute;
-    z-index: 2;
+    width: auto;
+    height: 40px;
+    user-select: none;
+    transition: transform 0.1s ease;
 }
 
-img{
-    height : 40px;
-    width: auto;
+/* Effet visuel quand on clique */
+#x img:active {
+    transform: scale(0.7);
+}
+
+/* Affichage du score */
+#scoreDisplay {
+    font-size: 22px;
+    color: #FFEB2B;
+    font-family: 'Courier New', monospace;
+    margin: 10px 0;
+}
+
+/* Timer */
+#timer {
+    font-size: 22px;
+    color: #f33;
+    font-family: 'Courier New', monospace;
+    margin: 10px 0;
+}
+
+/* Texte de fin de jeu */
+#x h1, #x h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.infoPopup {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    pointer-events: none;
+    animation: fade 30s forwards;
+    z-index: 9999;
+}
+
+@keyframes fade {
+    0% { opacity: 1; transform: translateY(0px); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.paused img {
+    pointer-events: none;
+    opacity: 0.5;
 }

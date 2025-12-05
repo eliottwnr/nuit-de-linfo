@@ -1,76 +1,168 @@
 let score = 0;
+let gameDuration = 60; // secondes
+let gameActive = true;
+let gamePaused = false;
 
 
 let LazerGame = function(){
-    let bodyCursor = document.getElementsByTagName("body")[0];
-    bodyCursor.style.cursor = "url('Laser_Cursor.png'), default";
+
+    // Curseur laser
+    document.body.style.cursor = "url('Laser_Cursor.png'), default";
 
     let canvas = document.querySelector('#x');
     let icon_template = document.querySelector('#template');
     let icon_height = 40;
     let icon_width = 40;
+    
 
+    let descriptions = {
+    "Facebook": "Le célèbre réseau social bleu.",
+    "Microsoft": "L'une des plus grandes entreprises informatiques.",
+    "Instagram": "Application populaire de partage de photos.",
+    "Amazon": "Le géant mondial du e-commerce.",
+    "Tchap": "Messagerie sécurisée de l'État français.",
+    "Primtux": "Distribution Linux éducative destinée aux écoles."
+};
+let alreadyShown = {
+    "Facebook": false,
+    "Microsoft": false,
+    "Instagram": false,
+    "Amazon": false,
+    "Tchap": false,
+    "Primtux": false
+};
+
+function showPopup(text, x, y) {
+    // Mettre le jeu en pause
+    gamePaused = true;
+
+    let popup = document.createElement("div");
+    popup.className = "infoPopup";
+    popup.textContent = text;
+
+    popup.style.left = (x + 45) + "px";  // légèrement à droite
+    popup.style.top = (y - 10) + "px";   // légèrement au-dessus
+
+    document.body.appendChild(popup);
+
+    // Disparaît après 1,5 s et reprend le jeu
+    setTimeout(() => {
+        popup.remove();
+        gamePaused = false;
+    }, 1500);
+}
+
+
+
+    // Images disponibles
     let tab_images = [
         "https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg",
         "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
         "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
         "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
         "https://upload.wikimedia.org/wikipedia/fr/b/b0/Tchap01.png",
-        "https://upload.wikimedia.org/wikipedia/commons/7/7a/Logo_Primtux_vertical-Fond_clair.png"];
- 
-    let pickRandomImage = function(){
-        let i = Math.floor(Math.random() * tab_images.length);
-        return tab_images[i];
-    };
-    let total_number_of_images = 10;
-    let max_height = canvas.offsetHeight - icon_height;
-    let max_width = canvas.offsetWidth - icon_width;
-    let randomCoord = function(){
-        var r = []
-        var x = Math.floor(Math.random() * max_width);
-        var y = Math.floor(Math.random() * max_height);
-        r = [x,y];
-        return r;
+        "https://upload.wikimedia.org/wikipedia/commons/7/7a/Logo_Primtux_vertical-Fond_clair.png"
+    ];
+
+    // Points selon l'image
+    let pointsTable = {
+        "Facebook": 10,
+        "Microsoft": 15,
+        "Instagram": 20,
+        "Amazon": 5,
+        "Tchap": -25,
+        "Primtux": -30
     };
 
+    // Choisir une image aléatoire
+    let pickRandomImage = () => tab_images[Math.floor(Math.random() * tab_images.length)];
+
+    // Coordonnées aléatoires
+    let randomCoord = function() {
+        let max_height = canvas.offsetHeight - icon_height;
+        let max_width = canvas.offsetWidth - icon_width;
+        return [
+            Math.floor(Math.random() * max_width),
+            Math.floor(Math.random() * max_height)
+        ];
+    };
+
+    // Création d'une image clicable
     let createImage = function(){
-        let node = icon_template.cloneNode(true);
-        let xy = randomCoord();
-        node.removeAttribute('id');
-        node.removeAttribute('hidden');
-        node.style.top = xy[1] + 'px';
-        node.style.left = xy[0] + 'px';
-        node.setAttribute('src', pickRandomImage());
-        //node.setAttribute('class', "cible");
-        canvas.appendChild(node);
+    if (!gameActive) return;
 
-    };
-    for (let i=0; i<total_number_of_images;i++){
+    let node = icon_template.cloneNode(true);
+    let xy = randomCoord();
+    node.removeAttribute('id');
+    node.removeAttribute('hidden');
+
+    let src = pickRandomImage();
+    node.style.top = xy[1] + 'px';
+    node.style.left = xy[0] + 'px';
+    node.setAttribute('src', src);
+
+    node.addEventListener("click", function(){
+    if (!gameActive || gamePaused) return; // <-- ici on bloque pendant la pop-up
+
+    let key = "";
+
+    if (src.includes("Facebook")) key = "Facebook";
+    else if (src.includes("Microsoft")) key = "Microsoft";
+    else if (src.includes("Instagram")) key = "Instagram";
+    else if (src.includes("Amazon")) key = "Amazon";
+    else if (src.includes("Tchap")) key = "Tchap";
+    else if (src.includes("Primtux")) key = "Primtux";
+
+    score += pointsTable[key] || 1;
+    document.querySelector("#scoreDisplay").textContent = "Score : " + score;
+
+    // POP-UP la première fois
+    if (!alreadyShown[key]) {
+        alreadyShown[key] = true;
+        showPopup(descriptions[key], xy[0], xy[1]);
+    }
+
+    node.remove();
+    createImage(); // nouvelle image immédiate
+});
+
+
+    canvas.appendChild(node);
+};
+
+
+    // Lancer 10 images au départ
+    for (let i = 0; i < 10; i++){
         createImage();
-    };
+    }
+
+    // Timer de la partie
+    let timeLeft = gameDuration;
+    let timerDiv = document.querySelector("#timer");
+
+    let countdown = setInterval(function(){
+
+    if (!gameActive || gamePaused) return; // <-- pause également le timer
+    timeLeft--;
+
+    if (timerDiv) timerDiv.textContent = "Temps : " + timeLeft + " sec";
+
+    if (timeLeft <= 0){
+        gameActive = false;
+        clearInterval(countdown);
+
+        // Stopper le jeu
+        canvas.innerHTML = `
+            <h1>FIN DU JEU</h1>
+            <h2>Score : ${score}</h2>
+            <button id="menuBtn">Retour au menu</button>
+        `;
+
+        document.querySelector("#menuBtn").addEventListener("click", function(){
+            window.location.href = "index.html";
+        });
+    }
+
+}, 1000);
 
 };
-//Shit went WRONG doesn't work for some reason, need a break
-//let goodShot = function(){
-//    score += 100;
-//    console.log("OpenSource");
-//};
-//let badShot = function(){
-//    score -= 50;
-//    console.log("GAFAM");
-//};
-//var checkShot = function(cible){
-//    let source = cible.src;
-//    if (source.includes("Facebook") || source.includes("Microsoft") || source.includes("Instagram") || source.includes("Amazon"))
-//    {
-//        badShot();
-//    }
-//    else
-//    {
-//        goodShot();
-//    }
-//}
-//
-//var cible = document.getElementsByTagName("img");
-//cible.addEventListener('click', checkShot(cible));
-
