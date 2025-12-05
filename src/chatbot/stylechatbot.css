@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+  /* font-family: Arial, sans-serif; */   /* A CHECKER !!!!!!! */
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* Floating Chat Icon */
+#chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(92, 92, 92); /* modifier la couleur pour que ça colle avec le reste du CSS */
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px, solid, black; /* marcher pas ?? */
+  /* border-radius: 50%; */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#chatbot-icon:hover {
+  background-color: rgb(138, 138, 138); /* modifier la couleur pour que ça colle avec le reste du CSS */
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Chatbot Container */
+#chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 450px;
+  background-color: #1f1f1f;
+  /* border-radius: 15px; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Hide Chatbot Initially */
+.hidden {
+  display: none !important;
+}
+
+/* Chatbot Header */
+#chatbot-header {
+  background-color: rgb(92, 92, 92);
+  color: white;
+  padding: 0px;
+  margin: 0px, 5px, 0px, 5px;
+  
+  /*border-top-left-radius: 15px;
+  border-top-right-radius: 15px; */
+  display: flex;
+  width : 20 rm;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* #chatbot-messages{
+  height: 400px;
+  overflow-y: auto;
+} */
+
+#botIcon {
+  border : 3px solid black;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  margin : 5px;
+}
+
+#logStatus {
+  font-style: italic;
+  font-size: 15px ;
+}
+
+#logIcon {
+  font-size: 10px;
+}
+
+#close-btn {
+  background: none;
+  border: 2px, solid, black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  align-items: right; /* j'aimerais aligner cette merde à droite ???*/
+}
+
+/* Chatbot Body */
+#chatbot-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Chatbot Messages */
+#chatbot-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 85%;
+}
+
+.message.user {
+  background-color: rgb(139, 139, 139);
+  color: white;
+  align-self: flex-end;
+}
+
+.message.bot {
+  background-color: #333;
+  color: white;
+  align-self: flex-start;
+}
+
+/* Input Section */
+#chatbot-input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #444;
+  background-color: #2c2c2c;
+}
+
+#chatbot-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #444;
+  /* border-radius: 10px; */
+  background-color: #333;
+  color: white;
+}
+
+#send-btn {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 15px;
+  background-color:  rgb(92, 92, 92);
+  color: white;
+  border: none;
+  /* border-radius: 8px; */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#send-btn:hover {
+  background-image: linear-gradient(to right, #1f47aa, #9c40a3, #de4385, #fe6760, #ff9b41, #ffa139, #ffa72f, #ffae24, #ff7e3f, #ff3e71, #ff00b1, #df2ff6);
+  color : black;
+}
