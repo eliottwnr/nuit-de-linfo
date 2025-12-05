@@ -6,7 +6,7 @@ let snakeImg = new Image();
 let imagesLoaded = 0;
 const totalImages = 4;
 
-pts.puzzle = 0;
+pts = 0;
 
 function checkAllLoaded() {
     imagesLoaded++;
@@ -78,7 +78,7 @@ function update() {
     context.drawImage(foodImg, foodX, foodY, blockSize, blockSize);
 
     if (snakeX == foodX && snakeY == foodY) {
-        pts.snake += 50; // augmente les points
+        pts += 50; // augmente les points
         snakeBody.push([foodX, foodY]);
         placeFood();
     }
@@ -106,7 +106,8 @@ function update() {
         
         // Out of bound condition
         gameOver = true;
-        alert("Game Over, score : " + pts.snake);
+        alert("Game Over, score : " + pts);
+        sessionStorage.setItem('snake', pts);
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
@@ -114,7 +115,9 @@ function update() {
             
             // Snake eats own body
             gameOver = true;
-            alert("Game Over, score : " + pts.snake);
+            alert("Game Over, score : " + pts);
+                    sessionStorage.setItem('snake', pts);
+
         }
     }
 }

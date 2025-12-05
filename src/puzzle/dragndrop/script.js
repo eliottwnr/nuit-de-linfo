@@ -91,5 +91,5 @@ zones.forEach(zone => {
     }
   });
 });
-
+sessionStorage.setItem('puzzle', pts.puzzle);
 updateStatus();

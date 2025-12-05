@@ -135,8 +135,6 @@ const questionsReponses = {
         "Je vous déteste.",
         "Derien..."
         ],
-
-    ""
     }
 
 // Si dernier mot fini en "quoi" : 
