@@ -49,7 +49,7 @@ function showPopup(text, x, y) {
     setTimeout(() => {
         popup.remove();
         gamePaused = false;
-    }, 1500);
+    }, 30000);
 }
 
 
