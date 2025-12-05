@@ -1,6 +1,8 @@
 body {
     background-color: #363536;
     font-family: "Pixelify Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .pixelify-sans-<uniquifier> {
@@ -20,6 +22,7 @@ nav {
     flex-direction: row;
     justify-content: space-around;
 }
+
 nav a {
   color: white;
   text-decoration: none;
@@ -52,16 +55,53 @@ section p {
     display: flex;
 }
 
-.topbar_links {
+div a {
+    font-size: 30px;
+    color: purple;
+    margin: 5px;
+    text-decoration: none;
+}
+
+div a:hover {
+    color: violet;
+}
+
+div a:active {
+    color: yellow;
+}
+
+.homelink {
     margin-right: auto;
 }
 
+p {
+    color: white;
+    align-self: center;
+}
+
 table {
+    border-radius: 10px;
+    background-color: #151515;
+    width: 700px;
+    align-self: center;
     border-collapse: collapse;
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }
 
 table td, table th {
     border: 1px solid grey;
+}
+
+th:last-child {
+    border-radius: 0px 10px 0px 0px;
+    background-color: #202020;
+}
+
+th:first-child {
+    border-radius: 10px 0px 0px 0px;
+    background-color: #202020;
 }
 
 table tr:first-child th {
@@ -80,4 +120,3 @@ table tr td:last-child,
 table tr th:last-child {
     border-right: 0;
 }
-

@@ -57,6 +57,86 @@ const questionsReponses = {
     "Situation": 
         ["Mais, vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd'hui avec vous, je dirais que c'est d'abord des rencontres. Des gens qui m'ont tendu la main, peut-être à un moment où je ne pouvais pas, où j'étais seul chez moi. Et c'est assez curieux de se dire que les hasards, les rencontres forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l'interlocuteur en face, je dirais, le miroir qui vous aide à avancer. Alors ce n'est pas mon cas, comme je le disais là, puisque moi au contraire, j'ai pu. Et je dis merci à la vie, je lui dis merci, je chante la vie, je danse la vie... Je ne suis qu'amour! Et finalement, quand beaucoup de gens aujourd'hui me disent : 'Mais comment fais-tu pour avoir cette humanité ?' Eh bien je leur réponds très simplement, je leur dis que c'est ce goût de l'amour. Ce goût donc qui m'a poussé aujourd'hui à entreprendre une construction mécanique, mais demain, qui sait, peut-être simplement à me mettre au service de la communauté, à faire le don, le don de soi..."],
 
+    "quoi":
+        ["FEUR",
+        "Quoi quoi ?",
+        "TU VEUX MA PHOTO ?",
+        "Romain m'a codé mais au final c'est Nathan qui rédige cette réponse, maintenant incline toi misérable paysan MOUAHAHAHHAAHAH",
+        "Tu veux ma photo ?"],
+    
+    "Quoi":
+        ["FEUR",
+        "TU VEUX MA PHOTO ?",
+        "Quoi quoi ?",
+        "Romain m'a codé mais au final c'est Nathan qui rédige cette réponse, maintenant incline toi misérable paysan MOUAHAHAHHAAHAH",
+        "Tu veux ma photo ?"],
+    
+    "comment":
+        ["Savais-tu que les chiots sont les petits des chiens ? c'est fou !",
+        "Diegoooo",
+        "MAMAMIA",
+        "KESK'IL'Y'A???",
+        "De ?"],
+    
+    "Comment":
+        ["Savais-tu que les chiots sont les petits des chiens ? c'est fou !",
+        "Diegoooo",
+        "MAMAMIA",
+        "KESK'IL'Y'A???",
+        "De ?"],
+
+    "bonjour":
+        ["Nombril.",
+        "Bonsoir",
+        "Bien le bonjour chère camarade, comment pourrais-je t'indiquer de ne plus m'utiliser à l'avenir ?",
+        "Il fait beau"],
+
+    "Bonjour":
+        ["Nombril.",
+        "Bonsoir",
+        "Bien le bonjour chère camarade, comment pourrais-je t'indiquer de ne plus m'utiliser à l'avenir ?",
+        "Il fait beau"],
+
+    "NIRD":
+        ["Effectivement je ne suis pas un nerd mais un nird, Nirdy, mais en vrai je suis que un chatbot complètement nul...un chat'bruti...",
+        "Kei cu minung ka si lo",
+        "אני לא בן אדם",
+        "मैं इंसान नहीं हूँ",
+        "Me na sim manuš",
+        "es naasu cylvāks ."
+        ],
+
+    "nird":
+        ["Effectivement je ne suis pas un nerd mais un nird, Nirdy, mais en vrai je suis que un chatbot complètement nul...un chat'bruti...",
+        "Kei cu minung ka si lo",
+        "אני לא בן אדם",
+        "मैं इंसान नहीं हूँ",
+        "Me na sim manuš",
+        "es naasu cylvāks ."
+        ],
+
+    "Nird":
+        ["Effectivement je ne suis pas un nerd mais un nird, Nirdy, mais en vrai je suis que un chatbot complètement nul...un chat'bruti...",
+        "Kei cu minung ka si lo",
+        "אני לא בן אדם",
+        "मैं इंसान नहीं हूँ",
+        "Me na sim manuš",
+        "es naasu cylvāks ."
+        ],
+
+    "merci":
+        [
+        "Je vous déteste.",
+        "Derien..."
+        ],
+
+    "Merci":
+        [
+        "Je vous déteste.",
+        "Derien..."
+        ],
+
+    ""
     }
 
 // Si dernier mot fini en "quoi" : 

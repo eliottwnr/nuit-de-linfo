@@ -5,6 +5,8 @@ const zones = Array.from(document.querySelectorAll('.drop-zone'));
 
 let placedCount = 0;
 
+pts.puzzle = 0;
+
 let toastTimer = null;
 const toast = document.createElement('div');
 toast.className = 'toast';
@@ -24,6 +26,7 @@ function showToast(msg, type = 'ok', duration = 1600) {
 
 function updateStatus() {
   statusText.textContent = `${placedCount} / 6 placés`;
+  pts.puzzle += 50;
 }
 
 function resetGame() {
@@ -77,7 +80,7 @@ zones.forEach(zone => {
       comp.dataset.placed = 'true';
       placedCount += 1;
       updateStatus();
-      showToast(`Composant ${draggedId} placé ✅`, 'ok', 1200);
+        showToast(`Composant ${draggedId} placé ✅ (${pts.puzzle} points récupérés)`, 'ok', 1200);
 
       if (placedCount === 6) showToast('Bravo ! Tous les composants sont placés 🎉', 'ok', 1800);
     } else {
